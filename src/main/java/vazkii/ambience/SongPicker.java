@@ -45,6 +45,7 @@ public final class SongPicker {
 	public static final String EVENT_BOSS = "boss";
 	public static final String EVENT_BOSS_WITHER = "bossWither";
 	public static final String EVENT_BOSS_DRAGON = "bossDragon";
+	public static final String EVENT_BOSS_LICH = "bossLich";
 	public static final String EVENT_IN_NETHER = "nether";
 	public static final String EVENT_IN_END = "end";
 	public static final String EVENT_HORDE = "horde";
@@ -122,6 +123,10 @@ public final class SongPicker {
                 		return songs;
             	} else if(type.equals("EnderDragon")) {
                  	String[] songs = getSongsForEvent(EVENT_BOSS_DRAGON);
+                	if(songs != null)
+                		return songs;
+		} else if(type.equals("TwilightForest:lich")) {
+                 	String[] songs = getSongsForEvent(EVENT_BOSS_LICH);
                 	if(songs != null)
                 		return songs;
             	}
